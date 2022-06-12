@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>开入开出</title>
+<link rel="stylesheet" type="text/css" href="layout.css">
+<script type="text/javascript" src="DIO.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body onload="DIO_load()">
+<img src="logo.gif" alt="" style="position:absolute;margin-top:0px;margin-left:0px;">
+    <div id="main">
+        <div id="title">
+            <font id="title_text">&nbsp;后台管理程序</font>
+        </div>
+        <div id="head">
+
+            <span class="goto">
+                <a href="rtd.html">实时数据</a>
+            </span>
+
+            <span class="goto">
+                <a href="elec_real.html">电能监测</a>
+            </span>
+
+            <span class="goto" >
+                <a href="Har_data.html">谐波清单</a>
+            </span>
+
+           <span class="goto">
+                <a href="flicker.html">波动与闪变</a>
+            </span>
+
+              <span class="goto">                                 
+               <a href="unbalance.html">三相不平衡</a> 
+               </span>  
+
+
+           <span class="goto"style="background-color:#33cc33;" >
+                <a href="DIO.html">开入开出</a>
+            </span>
+
+           <span class="goto" >
+                <a href="set.html">系统设置</a>
+            </span>
+
+            <span class="goto" >
+                <a href="analyse.html">分析数据</a>
+            </span>
+        </div>
+
+         <div style="position:relative;width:930px; height:420px; background-color:#33cc33; left:0px;top:100px; border:5px  #33cc33; ">
+             </div>
+            <div id="body" style="background-color:white;">
+              <table style="text-align:center; border:2px solid #ccffcc; border-radius:10px; margin-left:60px; margin-top:50px;" id="DI_table">
+      <tr>
+       <td style="color:green;font-weight:bold;">通道</td>
+       <td style="color:green;font-weight:bold;">状态</td>
+      </tr>
+
+      <tr>
+      <td style="color:red;font-weight:bold;">DI_1</td>
+      <td><input type="text"class="text_border"style="color:red"id="DI0">
+      </tr>
+
+       <tr>
+      <td style="color:red;font-weight:bold;">DI_2</td>
+      <td><input type="text"class="text_border"style="color:red"id="DI1">
+      </tr>
+
+      <tr>
+      <td style="color:red;font-weight:bold;">DI_3</td>
+      <td><input type="text"class="text_border"style="color:red"id="DI2">
+      </tr>
+
+       <tr>
+      <td style="color:red;font-weight:bold;">DI_4</td>
+      <td><input type="text"class="text_border"style="color:red"id="DI3">
+      </tr>
+      </table>
+        </div>
+
+    <div  style="position:absolute;width:400;height:300px;left:450px;top:150px;background-color:white;border-radius:10px;">
+            <table style="text-align:center; border:2px solid #ccffcc; border-radius:10px; margin-left:10px;margin-right:10px; margin-top:50px;" id="do">
+                <tr style="color:green; font-weight:bold;">
+                    <td>通道</td><td>自定义</td><td>状态</td><td>控制</td><td>控制</td>
+                </tr>
+                <tr>   
+                    <td style="color:red;font-weight:bold;">DO_1</td>
+                                        <td><input type="text"id="define1"style="width:80px;text-align:center;color:red;"></input></td>
+                                        <td><input type="text"id="state1"style="width:60px;text-align:center;color:red;"></input></td>
+                    <td><input type="button" name="btn_do1_open" value="开启" onclick="javascript:DO_set('1','1')"/></td>
+                    <td><input type="button" name="btn_do1_close" value="关闭" onclick="javascript:DO_set('1','0')"/></td>
+                </tr>
+                <tr>
+                    <td style="color:red;font-weight:bold;">DO_2</td>
+                                        <td><input type="text"style="width:80px;text-align:center;color:red;"></input></td>
+                                        <td><input type="text"id="state2"style="width:60px;text-align:center;color:red;"></input></td>
+                    <td><input type="button" name="btn_do2_open" value="开启"  onclick="javascript:DO_set('2','1')"/></td>
+                    <td><input type="button" name="btn_do2_close" value="关闭" onclick="javascript:DO_set('2','0')"/></td>
+                </tr>
+                <tr>
+                    <td style="color:red;font-weight:bold;">DO_3</td>                
+                                        <td><input type="text"style="width:80px;text-align:center;color:red;"></input></td>
+                                        <td><input type="text"id="state3"style="width:60px;text-align:center;color:red;"></input></td>
+                    <td><input type="button" name="btn_do3_open" value="开启"  onclick="javascript:DO_set('3','1')"/></td>
+                    <td><input type="button" name="btn_do3_close" value="关闭"  onclick="javascript:DO_set('3','0')"/></td>
+                </tr>
+                <tr>
+                    <td style="color:red;font-weight:bold;">DO_4</td>
+                                        <td><input type="text"style="width:80px;text-align:center;color:red;"></input></td>
+                                        <td><input type="text"id="state4"style="width:60px;text-align:center;color:red;"></input></td>
+                    <td><input type="button" name="btn_do4_open" value="开启"  onclick="javascript:DO_set('4','1')"/></td>
+                    <td><input type="button" name="btn_do4_close" value="关闭"  onclick="javascript:DO_set('4','0')"/></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
